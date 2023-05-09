@@ -4,7 +4,6 @@
 
 为减少重复请求，合理利用资源，建议提前在 issues 搜索镜像是否已转换过
 
-示例：[issues搜索gcr.io/google-samples/microservices-demo/emailservice:v0.3.5](https://github.com/togettoyou/hub-mirror/issues?q=gcr.io%2Fgoogle-samples%2Fmicroservices-demo%2Femailservice%3Av0.3.5)
 
 # 原理
 
@@ -16,8 +15,7 @@
 
 ## 方案一：白嫖我的，点个 Star ，直接提交 issues
 
-要求：严格按照模板规范提交，参考： [成功案例](https://github.com/togettoyou/hub-mirror/issues/1)
-，[失败案例](https://github.com/togettoyou/hub-mirror/issues/2)
+要求：严格按照模板规范提交
 
 > 当任务失败时，可以查看具体失败原因并修改 issues 主体内容，无需新建 issues
 
@@ -53,15 +51,5 @@
 
 5. 在 `Actions` 里选择 `hub-mirror` ，在右边 `···` 菜单里选择 `Enable Workflow`
 
-## 方案三：已有魔法，支持本地使用
-
-```shell
-$ go install github.com/togettoyou/hub-mirror@latest
-```
-
-```shell
-$ hub-mirror --username=xxxxxx --password=xxxxxx --content='{ "hub-mirror": ["gcr.io/google-samples/microservices-demo/emailservice:v0.3.5","hello-world:latest"] }'
-# 如果需要使用自定义镜像仓库
-$ hub-mirror --username=xxxxxx --password=xxxxxx --repository=registry.cn-hangzhou.aliyuncs.com/xxxxxx --content='{ "hub-mirror": ["gcr.io/google-samples/microservices-demo/emailservice:v0.3.5","hello-world:latest"] }'
 ```
 
